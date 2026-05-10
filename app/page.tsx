@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Recorder from "@/components/Recorder";
 import NotesReview, { type Notes } from "@/components/NotesReview";
+import Search from "@/components/Search";
 
 export default function Home() {
   const [transcript, setTranscript] = useState("");
@@ -75,6 +76,10 @@ export default function Home() {
       {notes && (
         <NotesReview key={extractCount} initial={notes} transcript={transcript} />
       )}
+
+      <hr className="border-gray-200" />
+
+      <Search />
     </main>
   );
 }
