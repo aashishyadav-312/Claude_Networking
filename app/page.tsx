@@ -72,7 +72,9 @@ export default function Home() {
         </pre>
       )}
 
-      {notes && <NotesReview key={extractCount} initial={notes} />}
+      {notes && (
+        <NotesReview key={extractCount} initial={notes} transcript={transcript} />
+      )}
     </main>
   );
 }
